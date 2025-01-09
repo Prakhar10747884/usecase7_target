@@ -15,4 +15,4 @@ jobs:
       - name: Run yamllint
         uses: ansible-actions/yamllint-action@v0.0.2
         with:
-          target: ".github/workflows/deploy.yml"
+          target: "deploy.yml"
