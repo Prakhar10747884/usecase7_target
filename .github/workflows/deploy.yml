@@ -1,16 +1,13 @@
-name: Target Repository Workflow
+name: Receive repository dispatch event
 
 on:
+  # Listen to a repository dispatch event by the name of `dispatch-event`
   repository_dispatch:
-    types: [custom-event]
+    types: [dispatch-event]
 
 jobs:
-  run-tests:
+  log:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # Add your steps here
-      - name: Run tests
-        run: echo "Running tests..."
+      - name: Event received
+        run: echo "Event received"
