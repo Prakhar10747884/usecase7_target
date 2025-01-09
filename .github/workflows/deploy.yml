@@ -1,0 +1,16 @@
+name: Target Repository Workflow
+
+on:
+  repository_dispatch:
+    types: [custom-event]
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Add your steps here
+      - name: Run tests
+        run: echo "Running tests..."
