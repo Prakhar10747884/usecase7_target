@@ -9,10 +9,9 @@ jobs:
   log:
     runs-on: ubuntu-latest
     steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v3
       - name: Event received
         run: echo "Event received"
-
-      - name: Run yamllint
-        uses: ansible-actions/yamllint-action@v0.0.2
-        with:
-          target: "deploy.yml"
+      - name: 'Yamllint'
+        uses: karancode/yamllint-github-action@master
