@@ -11,3 +11,6 @@ jobs:
     steps:
       - name: Event received
         run: echo "Event received"
+
+      - name: Run yamllint
+        uses: ansible-actions/yamllint-action@v0.0.2
